@@ -1,7 +1,7 @@
 <?php
 /**
  *
- * @package materializestarterwptheme
+ * @package materilize-starter-wp-theme
  */
 
  class Materialize_Menu_Walker extends Walker {

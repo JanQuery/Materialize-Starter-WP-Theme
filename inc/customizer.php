@@ -3,7 +3,7 @@
  * Materialize-Starter-WP-Theme functionality
  *
  * @package WordPress
- * @subpackage materializestarterwptheme
+ * @subpackage materilize-starter-wp-theme
  * @since Materialize-Starter-WP-Theme functionality 1.0
  */
 
@@ -12,12 +12,12 @@
 \*------------------------------------*/
 
 //Add custom colors to theme
-function wop_materializestarterwptheme_cutom_colors( $wp_customize ) {
+function wop_materilize_starter_wp_theme_cutom_colors( $wp_customize ) {
  
-    $wp_customize->add_section('materializestarterwptheme_cutom_colors', array(
-        'title'         => __( 'Color Settings', 'materializestarterwptheme' ),
+    $wp_customize->add_section('materilize-starter-wp-theme_cutom_colors', array(
+        'title'         => __( 'Color Settings', 'materilize-starter-wp-theme' ),
         'priority'      => 20,
-        'description'   => __( 'set your custom colors', 'materializestarterwptheme' )
+        'description'   => __( 'set your custom colors', 'materilize-starter-wp-theme' )
     ));
     
 //Customize background color
@@ -26,8 +26,8 @@ function wop_materializestarterwptheme_cutom_colors( $wp_customize ) {
     ));
     
     $wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'background_color', array(
-        'label'    => __( 'Background color', 'materializestarterwptheme' ),
-		'section'  => 'materializestarterwptheme_cutom_colors',
+        'label'    => __( 'Background color', 'materilize-starter-wp-theme' ),
+		'section'  => 'materilize-starter-wp-theme_cutom_colors',
 		'settings' => 'background_color',
     )));
 
@@ -37,8 +37,8 @@ function wop_materializestarterwptheme_cutom_colors( $wp_customize ) {
     ));
     
     $wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'background_color', array(
-        'label'    => __( 'Background color', 'materializestarterwptheme' ),
-		'section'  => 'materializestarterwptheme_cutom_colors',
+        'label'    => __( 'Background color', 'materilize-starter-wp-theme' ),
+		'section'  => 'materilize-starter-wp-theme_cutom_colors',
 		'settings' => 'background_color',
     )));
     
@@ -48,8 +48,8 @@ function wop_materializestarterwptheme_cutom_colors( $wp_customize ) {
     ));
     
     $wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'primary_color', array(
-        'label'    => __( 'Primary color (class="primary-color")', 'materializestarterwptheme' ),
-		'section'  => 'materializestarterwptheme_cutom_colors',
+        'label'    => __( 'Primary color or Main color (class="primary-color")', 'materilize-starter-wp-theme' ),
+		'section'  => 'materilize-starter-wp-theme_cutom_colors',
 		'settings' => 'primary_color',
     )));
     
@@ -59,8 +59,8 @@ function wop_materializestarterwptheme_cutom_colors( $wp_customize ) {
     ));
     
     $wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'secondary_color', array(
-        'label'    => __( 'Secondary color (class="secondary-color")', 'materializestarterwptheme' ),
-		'section'  => 'materializestarterwptheme_cutom_colors',
+        'label'    => __( 'Secondary color - for Buttons & CTA (class="secondary-color")', 'materilize-starter-wp-theme' ),
+		'section'  => 'materilize-starter-wp-theme_cutom_colors',
 		'settings' => 'secondary_color',
     )));
     
@@ -70,8 +70,8 @@ function wop_materializestarterwptheme_cutom_colors( $wp_customize ) {
     ));
     
     $wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'footer_color', array(
-        'label'    => __( 'Footer color (class="footer-color")', 'materializestarterwptheme' ),
-		'section'  => 'materializestarterwptheme_cutom_colors',
+        'label'    => __( 'Footer color (class="footer-color")', 'materilize-starter-wp-theme' ),
+		'section'  => 'materilize-starter-wp-theme_cutom_colors',
 		'settings' => 'footer_color',
     )));
     
@@ -81,8 +81,8 @@ function wop_materializestarterwptheme_cutom_colors( $wp_customize ) {
     ));
     
     $wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'header_color', array(
-        'label'    => __( 'Header color (class="header-color")', 'materializestarterwptheme' ),
-		'section'  => 'materializestarterwptheme_cutom_colors',
+        'label'    => __( 'Header color (class="header-color")', 'materilize-starter-wp-theme' ),
+		'section'  => 'materilize-starter-wp-theme_cutom_colors',
 		'settings' => 'header_color',
     )));
     
@@ -92,18 +92,22 @@ function wop_materializestarterwptheme_cutom_colors( $wp_customize ) {
     ));
     
     $wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'icon_color', array(
-        'label'    => __( 'Icon color (class="material-icons")', 'materializestarterwptheme' ),
-		'section'  => 'materializestarterwptheme_cutom_colors',
+        'label'    => __( 'Icon color (class="material-icons")', 'materilize-starter-wp-theme' ),
+		'section'  => 'materilize-starter-wp-theme_cutom_colors',
 		'settings' => 'icon_color',
     )));
     
 }
-function wop_materializestarterwptheme_css_customizer(){
+function wop_materilize_starter_wp_theme_css_customizer(){
 ?>
     <style type="text/css">
         body {background-color: #<?php echo get_theme_mod( 'background_color' ); ?>;}
         
         .primary-color {background-color: <?php if ( get_theme_mod( 'primary_color' ) ):  echo get_theme_mod( 'primary_color' );
+            else: echo '#29b6f6'; endif; ?>!important;
+            }
+        .primary-text-color,
+        .view-article {color: <?php if ( get_theme_mod( 'primary_color' ) ):  echo get_theme_mod( 'primary_color' );
             else: echo '#29b6f6'; endif; ?>!important;
             }
         
@@ -115,7 +119,7 @@ function wop_materializestarterwptheme_css_customizer(){
             else: echo '#ff9800'; endif; ?>!important;
             }
         
-        .header-color {color: <?php if ( get_theme_mod( 'header_color' ) ):  echo get_theme_mod( 'header_color' );
+        .header-color, .header-color a, a.post-edit-link {color: <?php if ( get_theme_mod( 'header_color' ) ):  echo get_theme_mod( 'header_color' );
             else: echo '#ff9800'; endif; ?>!important;
             }
         
@@ -127,27 +131,34 @@ function wop_materializestarterwptheme_css_customizer(){
             border-left: 5px solid <?php if ( get_theme_mod( 'header_color' ) ):  echo get_theme_mod( 'header_color' );
             else: echo '#ff9800'; endif; ?>;
         }
+        textarea.materialize-textarea:focus:not([readonly]),
+        input[type=text]:focus:not([readonly]) {
+            border-bottom: 1px solid <?php if ( get_theme_mod( 'header_color' ) ):  echo get_theme_mod( 'header_color' );
+            else: echo '#ff9800'; endif; ?>;
+            box-shadow: 0 1px 0 0 <?php if ( get_theme_mod( 'header_color' ) ):  echo get_theme_mod( 'header_color' );
+            else: echo '#ff9800'; endif; ?>;
+        }
         
     </style>
 <?php
 }
-add_action( 'wp_head', 'wop_materializestarterwptheme_css_customizer' );
-add_action( 'customize_register', 'wop_materializestarterwptheme_cutom_colors' );
+add_action( 'wp_head', 'wop_materilize_starter_wp_theme_css_customizer' );
+add_action( 'customize_register', 'wop_materilize_starter_wp_theme_cutom_colors' );
 
 
 // Add your logo to navbar
-function wop_materializestarterwptheme_logo_customizer( $wp_customize ) {
+function wop_materilize_starter_wp_theme_logo_customizer( $wp_customize ) {
 
     $wp_customize->add_section(
-        'materializestarterwptheme_logo_section',
+        'materilize-starter-wp-theme_logo_section',
         array(
-    	'title'            => __( 'Logo', 'materializestarterwptheme' ),
+    	'title'            => __( 'Logo', 'materilize-starter-wp-theme' ),
     	'priority'         => 65,
-    	'description'      => __('Upload your Logo to navigation bar', 'materializestarterwptheme' ),
+    	'description'      => __('Upload your Logo to navigation bar', 'materilize-starter-wp-theme' ),
 	) );
 
 	$wp_customize->add_setting(
-        'materializestarterwptheme_logo', 
+        'materilize-starter-wp-theme_logo', 
         array(
             'default'        => get_template_directory_uri() . '/img/default-logo.png',
             'width'         => 56,
@@ -156,14 +167,14 @@ function wop_materializestarterwptheme_logo_customizer( $wp_customize ) {
             'uploads'       => true,
             )
     );
-	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'materializestarterwptheme_logo', array(
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'materilize-starter-wp-theme_logo', array(
 
-    	'label'    => __( 'Aktuelles Logo', 'materializestarterwptheme' ),
-		'section'  => 'materializestarterwptheme_logo_section',
-		'settings' => 'materializestarterwptheme_logo',
+    	'label'    => __( 'Aktuelles Logo', 'materilize-starter-wp-theme' ),
+		'section'  => 'materilize-starter-wp-theme_logo_section',
+		'settings' => 'materilize-starter-wp-theme_logo',
 	) ) );
 
 }
-add_action('customize_register', 'wop_materializestarterwptheme_logo_customizer');
+add_action('customize_register', 'wop_materilize_starter_wp_theme_logo_customizer');
 
 ?>

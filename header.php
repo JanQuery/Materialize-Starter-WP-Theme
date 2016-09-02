@@ -13,15 +13,15 @@
     
 </head>
 
-<body <?php ?>>
+<body>
     
     <header id="masthead" class="site-header" role="banner">
       <nav class="primary-color" role="navigation">
         <div class="nav-wrapper container">
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="brand-logo">
-                <?php if ( get_theme_mod( 'materializepresstheme_logo' ) ) : ?>
+                <?php if ( get_theme_mod( 'materilize-starter-wp-theme_logo' ) ) : ?>
                 
-	                   <?php echo '<img src="' . esc_url( get_theme_mod( 'materializepresstheme_logo' ) ) . '" />'; ?>
+	                   <?php echo '<img src="' . esc_url( get_theme_mod( 'materilize-starter-wp-theme_logo' ) ) . '" />'; ?>
                 
                     <?php else: ?>
                 
@@ -62,7 +62,7 @@
                                                     <ul id="%1$s" class="%2$s">
                                                     <li><div class="userView">
                                                         <img src="' . esc_url( get_header_image() ) .'" alt="" class="background">
-                                                        <a href="#!user" class="header-avatar-sidebar"><img class="circlize" src="' . esc_url( get_theme_mod( 'materializepresstheme_avatar' )) . '" width="64" height="64"></a>
+                                                        <a href="#!user" class="header-avatar-sidebar"><img class="circlize" src="' . esc_url( get_theme_mod( 'materilize-starter-wp-theme_avatar' )) . '" width="64" height="64"></a>
                                                         <a href="' .  esc_url( home_url( '/' ) )  . '"><span class="white-text name">' . get_bloginfo( 'name' ) . '</a>
                                                         <a href="#"><span class="white-text email">' . get_bloginfo( 'description' ) . '</span></a>
                                                         </div>

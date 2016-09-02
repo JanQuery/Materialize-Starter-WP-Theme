@@ -71,7 +71,7 @@
                                         <!-- article -->
                                         <article>
 
-                                            <h2><?php esc_html_e( 'Sorry, nothing to display.', 'woptheme' ); ?></h2>
+                                            <h2><?php esc_html_e( 'Sorry, nothing to display.', 'materilize-starter-wp-theme' ); ?></h2>
 
                                         </article>
                                         <!-- /article -->

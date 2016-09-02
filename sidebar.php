@@ -2,7 +2,7 @@
 <aside id="slide-out" class="side-nav" role="complementary">
     <br>
     <br>
-    <i id="close-sidebar-right" class="material-icons pointer">close</i>
+    <i id="close-sidebar-right" class="material-icons pointer black-text">close</i>
     <br>
     <br>
     <?php get_search_form() ?>

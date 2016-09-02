@@ -43,7 +43,7 @@ if ( function_exists( 'add_theme_support' ) ){
     add_image_size('custom-size', 700, 200, true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
     
     // Localisation Support
-    load_theme_textdomain('materializestarterwptheme', get_template_directory() . '/languages');
+    load_theme_textdomain('materilize-starter-wp-theme', get_template_directory() . '/languages');
 }
 
 
@@ -52,12 +52,12 @@ if ( function_exists( 'add_theme_support' ) ){
 \*------------------------------------*/
 
 // Custom Excerpts
-function wop_materializestarterwptheme_wp_index($length) {
+function wop_materilize_starter_wp_theme_wp_index($length) {
     return 30;
 }
 
 // Create the Custom Excerpts callback
-function wop_materializestarterwptheme_wp_excerpt($length_callback = '', $more_callback = ''){
+function wop_materilize_starter_wp_theme_wp_excerpt($length_callback = '', $more_callback = ''){
     global $post;
     if (function_exists($length_callback)) {
         add_filter('excerpt_length', $length_callback);
@@ -72,22 +72,36 @@ function wop_materializestarterwptheme_wp_excerpt($length_callback = '', $more_c
     echo $output;
 }
 
+function wop_materilize_starter_wp_theme_pagination()
+{
+    global $wp_query;
+    $big = 999999999;
+    echo paginate_links(array(
+        'base' => str_replace($big, '%#%', get_pagenum_link($big)),
+        'format' => '?paged=%#%',
+        'current' => max(1, get_query_var('paged')),
+        'total' => $wp_query->max_num_pages
+    ));
+}
+add_action('init', 'wop_materilize_starter_wp_theme_pagination');
 
-function wop_materializestarterwptheme_register_menus(){
+
+function wop_materilize_starter_wp_theme_register_menus(){
     register_nav_menus( array(
-        'header-menu' => __('Main Navigation', 'materializestarterwptheme')
+        'header-menu' => __('Main Navigation', 'materilize-starter-wp-theme')
     ) );
 }
-add_action( 'init', 'wop_materializestarterwptheme_register_menus' );
+add_action( 'init', 'wop_materilize_starter_wp_theme_register_menus' );
 
 
-// If Dynamic Sidebar Exists
-if (function_exists('register_sidebar')){
+//Add Dynamic Sidebar
+add_action( 'widgets_init', 'wop_materilize_starter_wp_theme_widgets_init' );
+function wop_materilize_starter_wp_theme_widgets_init() {
 
     // Define Sidebar Widget Area 1
     register_sidebar(array(
-        'name' => __('Widget Area 1', 'materializestarterwptheme'),
-        'description' => __('Sidebar Menu 1', 'materializestarterwptheme'),
+        'name' => __('Widget Area 1', 'materilize-starter-wp-theme'),
+        'description' => __('Sidebar Menu 1', 'materilize-starter-wp-theme'),
         'id' => 'widget-area-1',
         'before_widget' => '<div id="%1$s" class="%2$s">',
         'after_widget' => '</div>',
@@ -97,8 +111,8 @@ if (function_exists('register_sidebar')){
 
     // Define Sidebar Widget Area 2
     register_sidebar(array(
-        'name' => __('Widget Area 2', 'materializestarterwptheme'),
-        'description' => __('Sidebar Menu 2', 'materializestarterwptheme'),
+        'name' => __('Widget Area 2', 'materilize-starter-wp-theme'),
+        'description' => __('Sidebar Menu 2', 'materilize-starter-wp-theme'),
         'id' => 'widget-area-2',
         'before_widget' => '<div id="%1$s" class="%2$s">',
         'after_widget' => '</div>',
@@ -108,8 +122,8 @@ if (function_exists('register_sidebar')){
 
       // Define Widget Area Homepage Intro
     register_sidebar(array(
-        'name' => __('Homepage Intro', 'materializestarterwptheme'),
-        'description' => __('Homepage Intro Content', 'materializestarterwptheme'),
+        'name' => __('Homepage Intro', 'materilize-starter-wp-theme'),
+        'description' => __('Homepage Intro Content', 'materilize-starter-wp-theme'),
         'id' => 'widget-homepage-intro',
         'before_widget' => '<div id="%1$s" class="%2$s">',
         'after_widget' => '</div>',
@@ -119,8 +133,8 @@ if (function_exists('register_sidebar')){
 
     // Define Widget Area Homepage ICON 1
     register_sidebar(array(
-        'name' => __('Homepage ICON 1', 'materializestarterwptheme'),
-        'description' => __('Homepage Only Widget', 'materializestarterwptheme'),
+        'name' => __('Homepage ICON 1', 'materilize-starter-wp-theme'),
+        'description' => __('Homepage Only Widget', 'materilize-starter-wp-theme'),
         'id' => 'widget-homepage-icon1',
         'before_widget' => '<div class="col s12 m4">
                     <div id="%1$s" class="%2$s icon-block center">',
@@ -130,8 +144,8 @@ if (function_exists('register_sidebar')){
     ));
         // Define Widget Area Homepage ICON 2
     register_sidebar(array(
-        'name' => __('Homepage ICON 2', 'materializestarterwptheme'),
-        'description' => __('Description for this widget-area...', 'materializestarterwptheme'),
+        'name' => __('Homepage ICON 2', 'materilize-starter-wp-theme'),
+        'description' => __('Description for this widget-area...', 'materilize-starter-wp-theme'),
         'id' => 'widget-homepage-icon2',
         'before_widget' => '<div class="col s12 m4">
                     <div id="%1$s" class="%2$s icon-block center">',
@@ -141,8 +155,8 @@ if (function_exists('register_sidebar')){
     ));
         // Define Widget Area Homepage ICON 3
     register_sidebar(array(
-        'name' => __('Homepage ICON 3', 'materializestarterwptheme'),
-        'description' => __('Description for this widget-area...', 'materializestarterwptheme'),
+        'name' => __('Homepage ICON 3', 'materilize-starter-wp-theme'),
+        'description' => __('Description for this widget-area...', 'materilize-starter-wp-theme'),
         'id' => 'widget-homepage-icon3',
         'before_widget' => '<div class="col s12 m4">
                     <div id="%1$s" class="%2$s icon-block center">',
@@ -153,8 +167,8 @@ if (function_exists('register_sidebar')){
     
         // Define Widget Area Footer 1
     register_sidebar(array(
-        'name' => __('Widget Area Footer 1', 'materializestarterwptheme'),
-        'description' => __('Footer area widget on left side', 'materializestarterwptheme'),
+        'name' => __('Widget Area Footer 1', 'materilize-starter-wp-theme'),
+        'description' => __('Footer area widget on left side', 'materilize-starter-wp-theme'),
         'id' => 'footer-area-1',
         'before_widget' => '<div id="%1$s" class="%2$s">',
         'after_widget' => '</div>',
@@ -164,8 +178,8 @@ if (function_exists('register_sidebar')){
     
     // Define Widget Area Footer 2
     register_sidebar(array(
-        'name' => __('Widget Area Footer 2', 'materializestarterwptheme'),
-        'description' => __('Footer area widget center', 'materializestarterwptheme'),
+        'name' => __('Widget Area Footer 2', 'materilize-starter-wp-theme'),
+        'description' => __('Footer area widget center', 'materilize-starter-wp-theme'),
         'id' => 'footer-area-2',
         'before_widget' => '<div id="%1$s" class="%2$s">',
         'after_widget' => '</div>',
@@ -175,8 +189,8 @@ if (function_exists('register_sidebar')){
     
     // Define Widget Area Footer 3
     register_sidebar(array(
-        'name' => __('Widget Area Footer 3', 'materializestarterwptheme'),
-        'description' => __('Footer area widget on right side', 'materializestarterwptheme'),
+        'name' => __('Widget Area Footer 3', 'materilize-starter-wp-theme'),
+        'description' => __('Footer area widget on right side', 'materilize-starter-wp-theme'),
         'id' => 'footer-area-3',
         'before_widget' => '<div id="%1$s" class="%2$s">',
         'after_widget' => '</div>',
@@ -187,16 +201,16 @@ if (function_exists('register_sidebar')){
 
 
 // Custom View Article link to Post ( edit_post_link() )
-function wop_materializestarterwptheme_blank_view_article($more)
+function wop_materilize_starter_wp_theme_blank_view_article($more)
 {
     global $post;
-    return '<br><br><a class="view-article btn-flat" href="' . get_permalink($post->ID) . '">' . __('Read more', 'materializestarterwptheme') . '</a>';
+    return '<br><br><a class="view-article btn-flat" href="' . get_permalink($post->ID) . '">' . __('Read more', 'materilize-starter-wp-theme') . '</a>';
 }
-add_filter('excerpt_more', 'wop_materializestarterwptheme_blank_view_article'); // Add 'View Article' button instead of [...] for Excerpts
+add_filter('excerpt_more', 'wop_materilize_starter_wp_theme_blank_view_article'); // Add 'View Article' button instead of [...] for Excerpts
 
 
 //Load Styles 
-function wop_materializestarterwptheme_style() {
+function wop_materilize_starter_wp_theme_style() {
     
     if ($GLOBALS['pagenow'] != 'wp-login.php' && !is_admin()) {
     
@@ -210,10 +224,10 @@ function wop_materializestarterwptheme_style() {
         wp_enqueue_style( 'style' );
     }
 }
-add_action( 'init', 'wop_materializestarterwptheme_style' );
+add_action( 'init', 'wop_materilize_starter_wp_theme_style' );
 
 // Load JavaScripts
-function wop_materializestarterwptheme_footer_scripts() {
+function wop_materilize_starter_wp_theme_footer_scripts() {
     
   if ($GLOBALS['pagenow'] != 'wp-login.php' && !is_admin()) {
 
@@ -229,7 +243,7 @@ function wop_materializestarterwptheme_footer_scripts() {
   }
     
 }
-add_action( 'init', 'wop_materializestarterwptheme_footer_scripts' );
+add_action( 'init', 'wop_materilize_starter_wp_theme_footer_scripts' );
 
 
 ?>
