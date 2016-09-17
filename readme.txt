@@ -46,6 +46,6 @@ Images: Screenshoots and Images within img folder by webdesignofpassion, license
 == Changelog ==
 
 = 1.0 =
-* Released: December 17.09, 2016
+* Released: September 17, 2016
 
 Initial release
