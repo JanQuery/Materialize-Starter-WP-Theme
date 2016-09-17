@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col s12 m10 offset-m1">
                 
-                 <h1 class="header center header-color"><?php bloginfo( 'name' ) ?></h1>
+                 <h1 class="header center primary-text-color"><?php bloginfo( 'name' ) ?></h1>
                  <div class="row center">
                     <p class="header col s12 light"><?php bloginfo( 'description' ) ?></p>
                 </div>
@@ -41,9 +41,12 @@
                     
                     <main role="main"><!-- Main Section -->
 
+                        <h2 class="center primary-text-color truncate"><?php esc_html_e( 'Latest posts', 'materialize-starter-wp-theme' ); ?></h2>
+                        <br>
+                        <br>
+                        
                         <section class="content-block"><!-- section -->
 
-                            <h2 class="homepage-title truncate"><?php the_title(); ?></h2>
 
             <?php
             $args = array( 'post_type' => 'post', 'posts_per_page' => 5 );
@@ -52,10 +55,11 @@
 
                                 <!-- article -->
                                 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                                    
+                                    <h3 class="header-color truncate"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
 
-                                    <?php the_content(); ?>
-
-                                        <?php comments_template( '', true ); // Remove if you don't want comments ?>
+                                    
+                                    <?php wop_materilize_starter_wp_theme_wp_excerpt('wop_materilize_starter_wp_theme_wp_index'); ?>
 
                                             <br class="clear">
 
@@ -71,7 +75,7 @@
                                         <!-- article -->
                                         <article>
 
-                                            <h2><?php esc_html_e( 'Sorry, nothing to display.', 'materilize-starter-wp-theme' ); ?></h2>
+                                            <h2><?php esc_html_e( 'Sorry, nothing to display.', 'materialize-starter-wp-theme' ); ?></h2>
 
                                         </article>
                                         <!-- /article -->

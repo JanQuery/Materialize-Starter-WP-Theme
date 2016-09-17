@@ -21,9 +21,9 @@
         
              <!-- post details -->
 			<span class="date"><?php the_time('j. F Y'); ?></span>
-			<span class="author"><?php esc_html_e( 'Published by', 'materilize-starter-wp-theme' ); ?> <?php the_author_posts_link(); ?></span>
-			<span class="comments"><?php if (comments_open( get_the_ID() ) ) comments_popup_link( __( 'Leave your thoughts', 'materilize-starter-wp-theme' ), __( '1 Comment', 'materilize-starter-wp-theme' ), __( '% Comments', 'materilize-starter-wp-theme' )); ?></span>
-            <p><?php esc_html_e( 'Categorised in: ', 'materilize-starter-wp-theme' ); the_category(', '); // Separated by commas ?></p>
+			<span class="author"><?php esc_html_e( 'Published by', 'materialize-starter-wp-theme' ); ?> <?php the_author_posts_link(); ?></span>
+			<span class="comments"><?php if (comments_open( get_the_ID() ) ) comments_popup_link( __( 'Leave your thoughts', 'materialize-starter-wp-theme' ), __( '1 Comment', 'materialize-starter-wp-theme' ), __( '% Comments', 'materialize-starter-wp-theme' )); ?></span>
+            <p><?php esc_html_e( 'Categorised in: ', 'materialize-starter-wp-theme' ); the_category(', '); // Separated by commas ?></p>
 			<!-- /post details -->
               </div>
               <div class="col s12 m3 center">
@@ -44,11 +44,11 @@
             <?php the_content(); // Dynamic Content ?>
         
     <div class="card-action">
-        <?php the_tags( __( 'Tags: ', 'materilize-starter-wp-theme' ), ', ', '<br>'); // Separated by commas with a line break at the end ?>
+        <?php the_tags( __( 'Tags: ', 'materialize-starter-wp-theme' ), ', ', '<br>'); // Separated by commas with a line break at the end ?>
 
 			
 
-			<p><?php esc_html_e( 'This post was written by ', 'materilize-starter-wp-theme' ); the_author(); ?></p>
+			<p><?php esc_html_e( 'This post was written by ', 'materialize-starter-wp-theme' ); the_author(); ?></p>
 
 			<?php edit_post_link(); // Always handy to have Edit Post Links available ?>
 
@@ -68,7 +68,7 @@
 		<!-- article -->
 		<article>
 
-			<h1><?php esc_html_e( 'Sorry, nothing to display.', 'materilize-starter-wp-theme' ); ?></h1>
+			<h1><?php esc_html_e( 'Sorry, nothing to display.', 'materialize-starter-wp-theme' ); ?></h1>
 
 		</article>
 		<!-- /article -->

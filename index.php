@@ -4,7 +4,7 @@
 		<!-- section -->
 		<section>
 
-			<h1 class="mega-text card-panel center primary-text-color truncate"><?php esc_html_e( 'Lezte Beiträge', 'materilize-starter-wp-theme' ); ?></h1>
+			<h1 class="card-panel center primary-text-color truncate"><?php esc_html_e( 'latest posts', 'materialize-starter-wp-theme' ); ?></h1>
 
 			<?php get_template_part('loop'); ?>
 

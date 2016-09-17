@@ -1,0 +1,290 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Materialize Starter WP Theme\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-09-05 00:01+0000\n"
+"PO-Revision-Date: 2016-09-05 00:46+0000\n"
+"Last-Translator: Admin <info@webdesignofpassion.de>\n"
+"Language-Team: German\n"
+"Language: de-DE\n"
+"Plural-Forms: nplurals=2; plural=n != 1\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco - https://localise.biz/"
+
+#: ../materialize-starter-wp-theme/404.php:11
+msgid "Page not found"
+msgstr "Seite wurde nicht gefunden"
+
+#: ../materialize-starter-wp-theme/404.php:13
+msgid "back"
+msgstr "zurück"
+
+#: ../materialize-starter-wp-theme/404.php:14
+msgid "back to homepage"
+msgstr "zurück zur Startseite"
+
+#: ../materialize-starter-wp-theme/archive.php:8
+msgid "Archive"
+msgstr "Archiv"
+
+#: ../materialize-starter-wp-theme/comments.php:3
+msgid "Post is password protected. Enter the password to view any comments."
+msgstr ""
+"Der Beitrag ist  passwortgeschützt. Gebe Sie das Passwort ein, um Kommentare "
+"zu sehen."
+
+#. translators: %s: post title
+#: ../materialize-starter-wp-theme/comments.php:13
+msgctxt "comments title"
+msgid "One thought on &ldquo;%s&rdquo;"
+msgstr "Ein Gedanke zu &ldquo;%s&rdquo;"
+
+#. translators: 1: number of comments, 2: post title
+#: ../materialize-starter-wp-theme/comments.php:17
+msgctxt "comments title"
+msgid "%1$s comment to &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s comments to &ldquo;%2$s&rdquo;"
+msgstr[0] "%1$s Kommentar zu &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s Kommentare zu &ldquo;%2$s&rdquo;"
+
+#: ../materialize-starter-wp-theme/comments.php:58
+msgid "Comment"
+msgstr "Kommentar"
+
+#: ../materialize-starter-wp-theme/comments.php:61
+msgid "Name"
+msgstr "Name"
+
+#: ../materialize-starter-wp-theme/comments.php:65
+msgid "Email"
+msgstr "Email"
+
+#: ../materialize-starter-wp-theme/comments.php:69
+msgid "Website"
+msgstr "Webseite"
+
+#: ../materialize-starter-wp-theme/front-page.php:44
+msgid "Latest posts"
+msgstr "Neueste Beiträge"
+
+#: ../materialize-starter-wp-theme/front-page.php:78 
+#: ../materialize-starter-wp-theme/loop.php:51 
+#: ../materialize-starter-wp-theme/page.php:45 
+#: ../materialize-starter-wp-theme/single.php:71
+msgid "Sorry, nothing to display."
+msgstr "Sorry! Nicht zum Anzeigen vorhanden."
+
+#: ../materialize-starter-wp-theme/functions.php:102
+msgid "Main Navigation"
+msgstr "Hauptnavigation"
+
+#: ../materialize-starter-wp-theme/functions.php:113
+msgid "Widget Area 1"
+msgstr "Widget Bereich 1"
+
+#: ../materialize-starter-wp-theme/functions.php:114
+msgid "Sidebar Menu 1"
+msgstr "Seitenleistenmenü 1"
+
+#: ../materialize-starter-wp-theme/functions.php:124
+msgid "Widget Area 2"
+msgstr "Widget Bereich 2"
+
+#: ../materialize-starter-wp-theme/functions.php:125
+msgid "Sidebar Menu 2"
+msgstr "Seitenleistenmenü 2"
+
+#: ../materialize-starter-wp-theme/functions.php:135
+msgid "Homepage Intro"
+msgstr "Startseiten Intro"
+
+#: ../materialize-starter-wp-theme/functions.php:136
+msgid "Homepage Intro Content"
+msgstr "Inhalt des Startseiten Intros"
+
+#: ../materialize-starter-wp-theme/functions.php:146
+msgid "Homepage ICON 1"
+msgstr "Startseiten Iconbereich 1"
+
+#: ../materialize-starter-wp-theme/functions.php:147
+msgid "Add Widget to icon section 1"
+msgstr "Füge ein Widget zum Iconbereich 1 ein."
+
+#: ../materialize-starter-wp-theme/functions.php:157
+msgid "Homepage ICON 2"
+msgstr "Startseiten Iconbereich 2"
+
+#: ../materialize-starter-wp-theme/functions.php:158
+msgid "Add Widget to icon section 2"
+msgstr "Füge ein Widget zum Iconbereich 2 ein"
+
+#: ../materialize-starter-wp-theme/functions.php:169
+msgid "Add Widget to icon section 3"
+msgstr "Füge ein Widget zum Iconbereich 3 ein"
+
+#: ../materialize-starter-wp-theme/functions.php:168
+msgid "Homepage ICON 3"
+msgstr "Startseiten Iconbereich 3"
+
+#: ../materialize-starter-wp-theme/functions.php:180
+msgid "Widget Area Footer 1"
+msgstr "Widgetbeich im Footer 1"
+
+#: ../materialize-starter-wp-theme/functions.php:181
+msgid "Footer area widget on left side"
+msgstr "Footerbereich links"
+
+#: ../materialize-starter-wp-theme/functions.php:191
+msgid "Widget Area Footer 2"
+msgstr "Widgetbeich im Footer 2"
+
+#: ../materialize-starter-wp-theme/functions.php:192
+msgid "Footer area widget center"
+msgstr "Footerbereich mittig"
+
+#: ../materialize-starter-wp-theme/functions.php:202
+msgid "Widget Area Footer 3"
+msgstr "Widgetbeich im Footer 3"
+
+#: ../materialize-starter-wp-theme/functions.php:203
+msgid "Footer area widget on right side"
+msgstr "Footerbereich rechts"
+
+#: ../materialize-starter-wp-theme/index.php:7
+msgid "latest posts"
+msgstr "neueste Beiträge"
+
+#: ../materialize-starter-wp-theme/loop.php:30 
+#: ../materialize-starter-wp-theme/single.php:24
+msgid "Published by"
+msgstr "Veröffentlicht von"
+
+#: ../materialize-starter-wp-theme/loop.php:31 
+#: ../materialize-starter-wp-theme/single.php:25
+msgid "Leave your thoughts"
+msgstr "Hinterlasse einen Gedanken"
+
+#: ../materialize-starter-wp-theme/loop.php:31 
+#: ../materialize-starter-wp-theme/single.php:25
+msgid "1 Comment"
+msgstr "1 Kommentar"
+
+#: ../materialize-starter-wp-theme/loop.php:31 
+#: ../materialize-starter-wp-theme/single.php:25
+msgid "% Comments"
+msgstr "% Kommentare"
+
+#: ../materialize-starter-wp-theme/searchform.php:8
+msgid "Keywords"
+msgstr "Suchbegriffe"
+
+#: ../materialize-starter-wp-theme/searchform.php:12
+msgid "Search"
+msgstr "Suchen"
+
+#: ../materialize-starter-wp-theme/single.php:26
+msgid "Categorised in: "
+msgstr "Kategorisiert in: "
+
+#: ../materialize-starter-wp-theme/single.php:47
+msgid "Tags: "
+msgstr "Schlagworte:"
+
+#: ../materialize-starter-wp-theme/single.php:51
+msgid "This post was written by "
+msgstr "Dieser Beitrag wurde erstellt von"
+
+#: ../materialize-starter-wp-theme/inc/customizer.php:32
+msgid "Read more"
+msgstr "Lies mich"
+
+#: ../materialize-starter-wp-theme/inc/customizer.php:42
+msgid "Color Settings"
+msgstr "Farbeinstellungen"
+
+#: ../materialize-starter-wp-theme/inc/customizer.php:43
+msgid "set your custom colors"
+msgstr "benutzerdefinierte Farben einstellen"
+
+#: ../materialize-starter-wp-theme/inc/customizer.php:54 
+#: ../materialize-starter-wp-theme/inc/customizer.php:66
+msgid "Background color"
+msgstr "Hintergrundfarbe"
+
+#: ../materialize-starter-wp-theme/inc/customizer.php:78
+msgid "Primary color"
+msgstr "Primärfarbe"
+
+#: ../materialize-starter-wp-theme/inc/customizer.php:90
+msgid "Secondary color - for Buttons & CTA"
+msgstr "Sekundärfarbe - für Buttons & CTAs"
+
+#: ../materialize-starter-wp-theme/inc/customizer.php:102
+msgid "Footer color"
+msgstr "Footerfarbe"
+
+#: ../materialize-starter-wp-theme/inc/customizer.php:114
+msgid "Header color"
+msgstr "Überschirftenfarbe"
+
+#: ../materialize-starter-wp-theme/inc/customizer.php:126
+msgid "Icon color"
+msgstr "Iconfarbe"
+
+#: ../materialize-starter-wp-theme/inc/customizer.php:187
+msgid "Images Setting"
+msgstr "Bildereinstelllungen"
+
+#: ../materialize-starter-wp-theme/inc/customizer.php:188
+msgid "Upload your Imges to theme"
+msgstr "Uploaden Sie ihre Bilder"
+
+#: ../materialize-starter-wp-theme/inc/customizer.php:205
+msgid "Current Logo"
+msgstr "Aktuelles Logo"
+
+#: ../materialize-starter-wp-theme/inc/customizer.php:224
+msgid "Current Avatar"
+msgstr "Aktueller Avatar"
+
+#: ../materialize-starter-wp-theme/inc/customizer.php:242
+msgid "Current Avatar Background"
+msgstr "Aktueller Avatarhindergrund"
+
+#: ../materialize-starter-wp-theme/inc/customizer.php:257
+msgid "Theme Setting"
+msgstr "Themeeinstellungen"
+
+#: ../materialize-starter-wp-theme/inc/customizer.php:258
+msgid "Customize Theme"
+msgstr "Theme anpassen"
+
+#: ../materialize-starter-wp-theme/inc/customizer.php:268
+msgid "Fix Navigation Bar"
+msgstr "Fixierte Navigationsleiste"
+
+#: ../materialize-starter-wp-theme/inc/customizer.php:280
+msgid "Your Custom Copyright Text"
+msgstr "Ihr benutzerdefinierter Copyrighttext"
+
+#. Name of the theme
+msgid "Materialize Starter WP Theme"
+msgstr "Materialize Starter WP Theme"
+
+#. Description of the theme
+msgid "WordPress Theme of Materialize Starter Template"
+msgstr "WordPress Theme of Materialize Starter Template"
+
+#. URI of the theme
+msgid "http://webdesignofpassion.de/projekt/"
+msgstr ""
+
+#. Author of the theme
+msgid "webdesignofpassion"
+msgstr ""
+
+#. Author URI of the theme
+msgid "http://webdesignofpassion.de/"
+msgstr ""

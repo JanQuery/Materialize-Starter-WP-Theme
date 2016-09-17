@@ -15,17 +15,17 @@
 
 <body>
     
-    <header id="masthead" class="site-header" role="banner">
+    <header id="masthead" class="site-header navbar-fixed" role="banner">
       <nav class="primary-color" role="navigation">
         <div class="nav-wrapper container">
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="brand-logo">
-                <?php if ( get_theme_mod( 'materilize-starter-wp-theme_logo' ) ) : ?>
+                <?php if ( get_theme_mod( 'materialize-starter-wp-theme_logo' ) ) : ?>
                 
-	                   <?php echo '<img src="' . esc_url( get_theme_mod( 'materilize-starter-wp-theme_logo' ) ) . '" />'; ?>
+	                   <?php echo '<img src="' . esc_url( get_theme_mod( 'materialize-starter-wp-theme_logo' ) ) . '" height="60px" />'; ?>
                 
                     <?php else: ?>
                 
-	                   <?php echo '<img src="' . esc_url( get_template_directory_uri() . '/img/default-logo.png')  . '" width="56px" height="56px" />'; ?>
+	                   <?php echo '<img src="' . esc_url( get_template_directory_uri() . '/img/default-logo.png')  . '" height="60px" />'; ?>
                 
                 <?php endif; ?>
                 
@@ -51,7 +51,12 @@
 			                             'walker'         => new Materialize_Menu_Walker())
 							                        );
 							                        ?>
-
+                        <?php // Display Logo or Avatar in navigation sidebar on mobile devices
+                              if (get_theme_mod( 'materialize-starter-wp-theme_avatar_header' )):
+                               $choose_image =  get_theme_mod( 'materialize-starter-wp-theme_avatar_header' );
+                              else: 
+                                $choose_image = get_theme_mod( 'materialize-starter-wp-theme_logo' );
+                              endif; ?>
                         <?php   wp_nav_menu( array(
 							                        'menu' => 'header-menu',
                                                     'theme_location' => 'header-menu',
@@ -59,16 +64,17 @@
 							                        'menu_id'        => 'mobile-nav',
 							                        'items_wrap'     => '
                                                     <br>
-                                                    <ul id="%1$s" class="%2$s">
+                                                    <ul id="%1$s" class="%2$s side-nav">
+                                                    <li id="icon-close-left-sidebar-container"><span id="close-sidebar-left" class="right"><i class="material-icons black-text pointer">close</i></span></a></li>
                                                     <li><div class="userView">
-                                                        <img src="' . esc_url( get_header_image() ) .'" alt="" class="background">
-                                                        <a href="#!user" class="header-avatar-sidebar"><img class="circlize" src="' . esc_url( get_theme_mod( 'materilize-starter-wp-theme_avatar' )) . '" width="64" height="64"></a>
-                                                        <a href="' .  esc_url( home_url( '/' ) )  . '"><span class="white-text name">' . get_bloginfo( 'name' ) . '</a>
-                                                        <a href="#"><span class="white-text email">' . get_bloginfo( 'description' ) . '</span></a>
+                                                        <img class="background" src="' . get_theme_mod( 'materialize-starter-wp-theme_avatar_header_background' ) . '" alt="' .  esc_url( home_url( 'name' ) )  . '-avatar">
+                                                        <a href="#!user" class="header-avatar-sidebar"><img class="circlize" src="' . esc_url( $choose_image ) . '" width="64" height="64"></a>
+                                                        <a href="' .  esc_url( home_url( '/' ) )  . '"><span class="primary-text-color name">' . get_bloginfo( 'name' ) . '</a>
+                                                        <a href="#"><span class="primary-text-color email">' . get_bloginfo( 'description' ) . '</span></a>
                                                         </div>
                                                     </li>
                                                         <li class="mobile-header center black-text">
-                                                            <p>Menu <span id="close-sidebar-left" class="right"><i class="material-icons white-text medium pointer">close</i></span></a></p>
+                                                            <p>Menu</p>
                                                         </li><ul class="collapsible" data-collapsible="accordion">%3$s</ul></ul>
                                                     <div class="clear"></div>',
                                             'fallback'        => 'Materialize_Mobile_Menu_Walker::fallback',

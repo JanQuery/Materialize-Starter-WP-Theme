@@ -3,13 +3,13 @@
 	   <main role="main">
         <!-- section -->
 		  <section class="container">
-              
+
               <!-- post thumbnail -->
               <?php if ( has_post_thumbnail()) : // Check if Thumbnail exists ?>
                     <div class="col s3 center-align"><br>
-                      
+
                             <?php the_post_thumbnail( 'medium', array( 'class' => 'background center-align responsive-img' ) ); ?>
-                        
+
                     </div>
                     <div class="col s9">
                         <h1 class="header center-align header-color truncate"><?php the_title(); ?></h1>
@@ -40,15 +40,15 @@
 		<?php else: ?>
 
 			<!-- article -->
-			<article class="col s12">
+			<article>
 
-				<h2><?php esc_html_e( 'Sorry, nothing to display.', 'materilize-starter-wp-theme' ); ?></h2>
+				<h2><?php esc_html_e( 'Sorry, nothing to display.', 'materialize-starter-wp-theme' ); ?></h2>
 
 			</article>
 			<!-- /article -->
 
 		<?php endif; ?>
-                
+
 		</section>
 		<!-- /section -->
 	</main>

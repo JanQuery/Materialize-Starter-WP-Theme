@@ -1,7 +1,7 @@
 <?php
 /**
  *
- * @package materilize-starter-wp-theme
+ * @package materialize-starter-wp-theme
  */
 
  class Materialize_Menu_Walker extends Walker {
@@ -30,7 +30,7 @@
        unset($classes['current-menu-item']);
      }
 
-
+       
      /* Check for children */
      $children = get_posts(array('post_type' => 'nav_menu_item', 'nopaging' => true, 'numberposts' => 1, 'meta_key' => '_menu_item_menu_item_parent', 'meta_value' => $item->ID));
      if (!empty($children)) {
@@ -51,7 +51,7 @@
      $attributes .= ! empty( $item->url )        ? ' href="'   . esc_attr( $item->url        ) .'"' : '';
      $attributes .= ! empty( $children )         ? ' class="dropdown-button" data-activates="dropdown-'. $item->ID .'"' : '';
 
-     $item_output = '<a'. $attributes .'>';
+     $item_output = '<a'. $attributes .' data-beloworigin="true" data-hover="true" >';
      $item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
      if(!empty($children))
        $item_output .= '&nbsp;&#9660;';

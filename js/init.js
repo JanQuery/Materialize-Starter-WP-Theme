@@ -1,18 +1,8 @@
 (function($){
   $(function(){
 
-    $('.dropdown-button').dropdown({
-      inDuration: 300,
-      outDuration: 225,
-      constrain_width: false, // Does not change width of dropdown to that of the activator
-      hover: true, // Activate on hover
-      gutter: 0, // Spacing from edge
-      belowOrigin: true, // Displays dropdown below the button
-      alignment: 'left' // Displays dropdown with edge aligned to the left of button
-    });
-    
     $(".button-collapse").sideNav();
-    
+      
     $("#close-sidebar-left").on("click", function (event) {
         $('.button-collapse').sideNav('hide');
     });
@@ -20,12 +10,15 @@
     $('.button-collapse-sidebar').sideNav({
       menuWidth: 355, // Default is 240
       edge: 'right', // Choose the horizontal origin
-      closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+      closeOnClick: false
     });
     
     $("#close-sidebar-right").on("click", function (event) {
         $('.button-collapse-sidebar').sideNav('hide');
     });
+      
+    $("h1, h2, h3, h4, h5, h6").not("h1.primary-text-color, h2.primary-text-color, h3.primary-text-color").addClass('header-color');
+  
 
   }); // end of document ready
 })(jQuery); // end of jQuery name space

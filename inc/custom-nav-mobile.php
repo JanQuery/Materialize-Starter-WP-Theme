@@ -1,7 +1,7 @@
 <?php
 /**
  *
- * @package materilize-starter-wp-theme
+ * @package materialize-starter-wp-theme
  */
 
 class Materialize_Mobile_Menu_Walker extends Walker {
@@ -175,11 +175,17 @@ class Materialize_Mobile_Menu_Walker extends Walker {
         $title = apply_filters( 'nav_menu_item_title', $title, $item, $args, $depth );
  
         $item_output = $args->before;
+        if(!empty($children))
+            $item_output .= '<div class="collapsible-header"><span class="black-text">';
+        if(empty($children))
         $item_output .= '<div class="collapsible-header"><a'. $attributes .'>';
         $item_output .= $args->link_before . $title . $args->link_after;
         if(!empty($children))
             $item_output .= '&nbsp;&#9660;';
-        $item_output .= '</a></div>';
+        if(!empty($children))
+            $item_output .= '</span></div><div class="collapsible-body" style="padding:0 15px"><a'. $attributes .'>' . $args->link_before . $title . $args->link_after .'</a></div>';;
+        if(empty($children))
+            $item_output .= '</a></div>';
         $item_output .= $args->after;
  
         /**
